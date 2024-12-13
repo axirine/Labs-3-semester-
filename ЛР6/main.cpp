@@ -1,7 +1,4 @@
 #include "matrix.h"
-#include "OutOfRangeNegative.h"
-#include "OutOfRangeLarge.h"
-#include "OutOfRangeNull.h"
 using namespace std;
 
 int main() {
@@ -9,7 +6,6 @@ int main() {
     List list;
     Node* head;
         Matrix* result;
-        int NodesMade = 0;
         while (1) {
             int MatrixType;
             bool is_result_stored = false;
@@ -79,7 +75,6 @@ int main() {
                                 Matrix temp = matrix1 + matrix2;
                                 result = new SquareMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -130,7 +125,6 @@ int main() {
                                 Matrix temp = matrix1- matrix2;
                                 result = new SquareMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -203,7 +197,6 @@ int main() {
                                 Matrix temp = matrix1.multiply(matrix2);
                                 result = new SquareMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -254,7 +247,6 @@ int main() {
                                 Matrix temp = matrix1.transpose();
                                 result = new SquareMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -391,7 +383,6 @@ int main() {
                                 Matrix temp = matrix1 + matrix2;
                                 result = new IdentityMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -414,7 +405,6 @@ int main() {
                                 Matrix temp = matrix1 - matrix2;
                                 result = new IdentityMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -440,7 +430,6 @@ int main() {
                                 Matrix temp = matrix1.multiply(matrix2);
                                 result = new IdentityMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -463,7 +452,6 @@ int main() {
                                 Matrix temp = matrix1.transpose();
                                 result = new IdentityMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -603,7 +591,6 @@ int main() {
                                 Matrix temp = matrix1 + matrix2;
                                 result = new RectangularMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -651,7 +638,6 @@ int main() {
                                 Matrix temp = matrix1 - matrix2;
                                 result = new RectangularMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -718,7 +704,6 @@ int main() {
                                 Matrix temp = matrix1.multiply(matrix2);
                                 result = new RectangularMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
@@ -766,7 +751,6 @@ int main() {
                                 Matrix temp = matrix1.transpose();
                                 result = new RectangularMatrix(temp);
                                 list.append(list, result);
-                                NodesMade++;
                                 is_result_stored = true;
                                 cout << "Matrix added to the list." << endl;
                                 list.display(list);
