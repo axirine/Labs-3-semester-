@@ -227,7 +227,6 @@ void LinkedFile::getStringAt(int index) {
 
 void LinkedFile::clear() {
     this->close();
-    // Переоткрываем файл в режиме перезаписи
     this->open(filename, ios::out | ios::binary);
     if (this->is_open()) {
         header.head = -1;
@@ -237,7 +236,6 @@ void LinkedFile::clear() {
     } else {
         cout << "Failed to clear the file.\n";
     }
-    // Переоткрываем файл для чтения и записи
     this->close();
     this->open(filename, ios::in | ios::out | ios::binary);
 }
